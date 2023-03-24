@@ -2,9 +2,9 @@
   width: 100vw;
   height: calc(100vh - 80px);
   background-image: url('/img/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
   display: flex;
   flex-direction: column;
   justify-content: center;

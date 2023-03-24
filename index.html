@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/default.css">
   <link rel="stylesheet" href="/css/topo.css">
   <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/responsivo.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <div class="lado">
       <a href="index.html"><h3>RIAN STORE</h3></a>
     </div>
-    <div class="lado">
+    <div class="lado topoDireita">
       <a href="">
         <p href="">PRODUTOS</p>
       </a>
@@ -28,21 +29,40 @@
         <p href="">CONTATO</p>
       </a>
 
-      <img src="/img/pesquisar.svg" id="pesquisar" alt="" srcset="">
-      <img src="/img/carrinho.svg" alt="" srcset="">
-      <p id="preco">R$ 0,00</p>
+      <a href=""><img src="/img/pesquisar.svg" id="pesquisar" alt="" srcset=""></a>
+      <a href=""><img src="/img/carrinho.svg" alt="" srcset="">
+      <p id="preco">R$ 0,00</p></a>
       <a href="login.html"><img src="/img/conta.svg" alt="" srcset=""></a>
     </div>
+
+
+      <nav>
+        <a href=""><img src="/img/carrinho.svg" alt="" srcset="">
+          <p id="preco">R$ 0,00</p></a>
+        <ul class="nav-links">
+          <li><a href="#">Conta</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    
+
   </header>
 
   <div class="home">
     <div class="meio">
-      <h1>BEM-VINDO, À RIAN STORE!</h1>
+      <h1>BEM-VINDO À RIAN STORE!</h1>
       <h3>CONHEÇA NOSSOS PRODUTOS ESPORTIVOS</h3>
       <button type="submit" id="botaoHome">CONHECER</button>
     </div>
   </div>
 
+  <script src="/js/script.js"></script>
 </body>
-
-</html>
+</html> 
