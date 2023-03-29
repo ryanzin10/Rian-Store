@@ -1,7 +1,7 @@
 header{
     width: 100vw;
     height: 80px;
-    background-color: #fffde6;
+    background-color: #010027;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,27 +14,26 @@ header{
     align-items: center;
 }
 
-header img{
+header span{
     width: 20px;
+    color: white;
+    margin: 0 10px;
 }
 
 header #pesquisar{
     margin-left: 50px;
-    margin-right: 20px;
 }
 
-header p{
-    margin: 0 10px;
-}
-
-#preco{
-    margin: 0 20px 0 0;
+header p, header h3{
+    margin-right: 25px;
+    color: white;
 }
 
 header a{
     display: flex;
     align-items: center;
     padding: 0;
+    color: white;
 }
 
 nav{
