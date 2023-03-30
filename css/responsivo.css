@@ -1,4 +1,4 @@
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
   .home{
     height: 70vh;
     background-image: url('/img/bg copy.jpg');
@@ -75,9 +75,21 @@
       margin-right: 20px;
     }
 
+    .telaLogin{
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .telaCadastro .cadastro{
       width: 90vw;
     }
+
+    .login input{
+      padding: 10px 20px;
+    }
+
     .secaoCadastro{
       width: 90vw;
     }

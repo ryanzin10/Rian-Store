@@ -56,9 +56,10 @@
 
     <div class="telaCadastro">
         <div class="cadastro">
-            <h3>Cadastro de Cliente</h3>
+            <h3>Cadastro de Produto</h3>
 
-            <form method="post" name="meuForm" onsubmit="return validarFormulario()">
+            <form method="post">
+
               <div class="forms">
                 <div class="formLinha">
                   <div class="formLeft">
@@ -71,81 +72,78 @@
                   </div>
 
                   <div class="formRight">
-                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="sobrenome">Sobrenome:</label>
+                        <label for="cod">Código:</label>
                       </div>
                       <div class="campo">
-                        <input type="text" name="sobrenome">
+                        <input type="number" name="cod">
                       </div>
-                    </div>
                   </div>
                 </div>
 
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="email">Email:</label>
+                      <label for="preco">Preço:</label>
                     </div>
                     <div class="campo">
-                      <input type="email" name="email">
+                      <input type="number" name="preco" step="0.01" min="0">
                     </div>
                   </div>
 
                   <div class="formRight">
-                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="telefone">Telefone:</label>
+                        <label for="quant">Quantidade:</label>
                       </div>
                       <div class="campo">
-                        <input type="tel" name="telefone">
+                        <input type="number" name="quant">
                       </div>
-                    </div>
                   </div>
                 </div>
 
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="senha">Senha:</label>
+                      <label for="marca">Marca:</label>
                     </div>
                     <div class="campo">
-                      <input type="password" name="senha">
+                      <input type="text" name="marca">
                     </div>
                   </div>
 
                   <div class="formRight">
-                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="senha2">Confirme a senha:</label>
+                        <label for="cat">Categoria:</label>
                       </div>
                       <div class="campo">
-                        <input type="password" name="senha2">
+                        <select name="cat" id="">
+                          <option value="">Camisa</option>
+                          <option value="">Short</option>
+                          <option value="">Chuteira</option>
+                          <option value="">Meia</option>
+                          <option value="">Caneleira</option>
+                        </select>
                       </div>
                     </div>
-                  </div>
                 </div>
-
 
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="endereco">Endereço:</label>
+                      <label for="forn">Fornecedor:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="endereco">
+                      <input type="text" name="forn">
                     </div>
                   </div>
 
                   <div class="formRight">
-                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="data">Data de Nascimento:</label>
+                        <label for="dataForn">Data de fornecimento:</label>
                       </div>
                       <div class="campo">
-                        <input type="date" name="data">
+                        <input type="date" name="dataForn">
                       </div>
-                    </div>
                   </div>
                 </div>
 
@@ -153,34 +151,28 @@
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="sexo">Gênero:</label>
+                      <label for="estoque">Quantidade:</label>
                     </div>
                     <div class="campo">
-                      <select name="sexo" id="opcoes">
-                        <option value="masc">Masculino</option>
-                        <option value="fem">Feminino</option>
-                        <option value="outro">Outro</option>
-                      </select>
+                      <input type="number" name="estoque" id="">
                     </div>
                   </div>
 
-                  <div class="formRight" id="cpf">
-                    <div class="formLeft">
+                  <div class="formRight">
                       <div class="textoLabel">
-                        <label for="cpf">CPF:</label>
+                        <label for="cor">Cor:</label>
                       </div>
                       <div class="campo">
-                        <input type="text" name="cpf">
+                        <input type="text" name="cor">
                       </div>
                     </div>
-                  </div>
                 </div>
 
 
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="foto">Foto 3x4:</label>
+                      <label for="foto">Foto:</label>
                     </div>
                     <div class="campo">
                       <input type="file" name="foto"  id="foto3x4">
@@ -189,12 +181,13 @@
                 </div>
                 
               </div>
+            
+            </form>
 
         </div>
         <div class="secaoCadastro">
-          <button type="submit" id="botao" class="botaoCad">Cadastrar</button>
+          <button type="submit" onclick="validarFormulário()" id="botao" class="botaoCad">Cadastrar</button>
         </div>
-      </form>
     </div>
     
     <script src="/js/script.js"></script>
