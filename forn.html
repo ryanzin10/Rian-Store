@@ -60,15 +60,14 @@
 
     <div class="telaCadastro">
         <div class="cadastro">
-            <h3>Cadastro de Produto</h3>
+            <h3>Cadastro de Fornecedor</h3>
 
-            <form method="post" name="meuForm2" onsubmit="validarFormulario1(event)">
-
+            <form method="post" name="meuForm3" onsubmit="validarFormulario3(event)">
               <div class="forms">
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="nome">Nome:</label>
+                      <label for="nome">Nome da empresa:</label>
                     </div>
                     <div class="campo">
                       <input type="text" name="nome" required>
@@ -76,78 +75,81 @@
                   </div>
 
                   <div class="formRight">
+                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="cod">Código:</label>
+                        <label for="end">Endereço:</label>
                       </div>
                       <div class="campo">
-                        <input type="number" name="cod" required>
+                        <input type="text" name="end" required>
                       </div>
+                    </div>
                   </div>
                 </div>
 
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="preco">Preço:</label>
+                      <label for="email">Email:</label>
                     </div>
                     <div class="campo">
-                      <input type="number" name="preco" step="0.01" min="0" required>
+                      <input type="email" name="email" required>
                     </div>
                   </div>
 
                   <div class="formRight">
+                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="quant">Quantidade:</label>
+                        <label for="telefone">Telefone:</label>
                       </div>
                       <div class="campo">
-                        <input type="number" name="quant" required>
+                        <input type="tel" name="telefone" required>
                       </div>
+                    </div>
                   </div>
                 </div>
 
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="marca">Marca:</label>
+                      <label for="cnpj">CNPJ ou CPF:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="marca" required>
+                      <input type="text" name="cnpj" required>
                     </div>
                   </div>
 
                   <div class="formRight">
+                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="cat">Categoria:</label>
+                        <label for="nomeRep">Nome do Representante:</label>
                       </div>
                       <div class="campo">
-                        <select name="cat" id="">
-                          <option value="">Camisa</option>
-                          <option value="">Short</option>
-                          <option value="">Chuteira</option>
-                          <option value="">Meia</option>
-                          <option value="">Caneleira</option>
-                        </select>
+                        <input type="text" name="nomeRep" required>
                       </div>
                     </div>
+                  </div>
                 </div>
+
 
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="forn">Fornecedor:</label>
+                      <label for="data">Data de início do relacionamento:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="forn" required>
+                      <input type="date" name="data" required>
                     </div>
                   </div>
 
                   <div class="formRight">
+                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="dataForn">Data de fornecimento:</label>
+                        <label for="tempo">Tempo médio de entrega (dias):</label>
                       </div>
                       <div class="campo">
-                        <input type="date" name="dataForn" required>
+                        <input type="number" name="tempo" required>
                       </div>
+                    </div>
                   </div>
                 </div>
 
@@ -155,47 +157,40 @@
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="custo">Custo:</label>
+                      <label for="pag">Formas de pagamento:</label>
                     </div>
                     <div class="campo">
-                      <input type="number" name="custo" id="" step="0.01" min="0" required>
+                      <input type="number" name="pag" required>
                     </div>
                   </div>
 
                   <div class="formRight">
+                    <div class="formLeft">
                       <div class="textoLabel">
-                        <label for="cor">Cor:</label>
+                        <label for="cargo">Tipo de loja:</label>
                       </div>
                       <div class="campo">
-                        <input type="text" name="cor" required>
+                        <input type="radio" name="loja" id="" class="radio1"><label class="labelRadio">Loja Física</label>
+                        <input type="radio" name="loja" id="" class="radio1"><label class="labelRadio">Loja Virtual</label>
                       </div>
                     </div>
+                  </div>
                 </div>
 
 
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="foto">Foto:</label>
+                      <label for="foto">Logo da empresa:</label>
                     </div>
                     <div class="campo">
-                      <input type="file" name="foto"  id="foto3x4">
+                      <input type="file" name="foto"  id="foto">
                     </div>
                   </div>
                 </div>
-
-                <div class="formLinha">
-                  <div class="formLeft">
-                    <div class="textoLabel">
-                      <label for="desc">Descrição:</label>
-                    </div>
-                    <div class="campo">
-                      <textarea name="desc" id="desc" cols="49" rows="5"></textarea>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
-            
+
         </div>
         <div class="secaoCadastro">
           <button type="submit" id="botao" class="botaoCad">Cadastrar</button>

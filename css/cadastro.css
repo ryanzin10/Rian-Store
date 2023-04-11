@@ -64,15 +64,24 @@ input, select{
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 2px 5px -1px;
   border-radius: 5px;
 }
+textarea{
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 2px 5px -1px;
+  border-radius: 5px;
+}
 
 label{
   font-size: 13px;
 }
 
+.labelRadio{
+  margin: 0 5px;
+}
+
 #cpf{
   margin-left: 85px;
 }
-
 
 .secaoCadastro{
   width: 550px;
