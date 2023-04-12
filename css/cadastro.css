@@ -75,6 +75,20 @@ label{
   font-size: 13px;
 }
 
+.vertical{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.vertical div{
+  height: 25px;
+}
+
+.last{
+  margin-bottom: 10px;
+}
+
 .labelRadio{
   margin: 0 5px;
 }

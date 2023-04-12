@@ -62,7 +62,7 @@
         <div class="cadastro">
             <h3>Cadastro de Fornecedor</h3>
 
-            <form method="post" name="meuForm3" onsubmit="validarFormulario3(event)">
+            <form method="post" name="meuForm4" onsubmit="validarFormulario4(event)">
               <div class="forms">
                 <div class="formLinha">
                   <div class="formLeft">
@@ -102,7 +102,7 @@
                         <label for="telefone">Telefone:</label>
                       </div>
                       <div class="campo">
-                        <input type="tel" name="telefone" required>
+                        <input type="tel" name="telefone" class="inputTel" required>
                       </div>
                     </div>
                   </div>
@@ -111,10 +111,10 @@
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="cnpj">CNPJ ou CPF:</label>
+                      <label for="cnpj">CNPJ:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="cnpj" required>
+                      <input type="text" name="cnpj" class="inputCnpj" required>
                     </div>
                   </div>
 
@@ -157,10 +157,15 @@
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="pag">Formas de pagamento:</label>
+                      <label for="pag">Formas de pagamento aceitas:</label>
                     </div>
                     <div class="campo">
-                      <input type="number" name="pag" required>
+                      <div class="vertical">
+                        <div><input type="checkbox" name="pag"><label class="labelRadio">Cartão (crédito ou débito)</label></div>
+                        <div><input type="checkbox" name="pag"><label class="labelRadio">Transferência bancária</label></div>
+                        <div><input type="checkbox" name="pag"><label class="labelRadio">PIX</label></div>
+                        <div class="last"><input type="checkbox" name="pag"><label class="labelRadio">Dinheiro na entrega</label></div>
+                      </div>   
                     </div>
                   </div>
 
@@ -170,21 +175,11 @@
                         <label for="cargo">Tipo de loja:</label>
                       </div>
                       <div class="campo">
-                        <input type="radio" name="loja" id="" class="radio1"><label class="labelRadio">Loja Física</label>
-                        <input type="radio" name="loja" id="" class="radio1"><label class="labelRadio">Loja Virtual</label>
+                        <div class="vertical">
+                          <div><input type="radio" name="loja" id="" class="radio1"><label class="labelRadio">Loja Física</label></div>
+                          <div><input type="radio" name="loja" id="" class="radio1"><label class="labelRadio">Loja Virtual</label></div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="formLinha">
-                  <div class="formLeft">
-                    <div class="textoLabel">
-                      <label for="foto">Logo da empresa:</label>
-                    </div>
-                    <div class="campo">
-                      <input type="file" name="foto"  id="foto">
                     </div>
                   </div>
                 </div>
@@ -193,7 +188,7 @@
 
         </div>
         <div class="secaoCadastro">
-          <button type="submit" id="botao" class="botaoCad">Cadastrar</button>
+          <input type="submit" id="botao" class="botaoCad" value="Cadastrar"/>
         </div>
       </form>
     </div>

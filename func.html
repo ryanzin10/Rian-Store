@@ -102,7 +102,7 @@
                         <label for="telefone">Telefone:</label>
                       </div>
                       <div class="campo">
-                        <input type="tel" name="telefone" required>
+                        <input type="text" name="telefone" class="inputTel" required>
                       </div>
                     </div>
                   </div>
@@ -114,7 +114,7 @@
                       <label for="cpf">CPF:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="cpf" required>
+                      <input type="text" name="cpf" class="inputCpf" required>
                     </div>
                   </div>
 
@@ -160,7 +160,7 @@
                       <label for="salario">Salário:</label>
                     </div>
                     <div class="campo">
-                      <input type="number" name="salario" step="0.01" min="0" required>
+                      <input type="text" name="salario" class="inputPreco" required>
                     </div>
                   </div>
 
@@ -186,7 +186,7 @@
                 <div class="formLinha">
                   <div class="formLeft">
                     <div class="textoLabel">
-                      <label for="foto">Foto 3x4:</label>
+                      <label for="foto">Foto 3x4 (opcional):</label>
                     </div>
                     <div class="campo">
                       <input type="file" name="foto"  id="foto3x4">
@@ -198,7 +198,7 @@
 
         </div>
         <div class="secaoCadastro">
-          <button type="submit" id="botao" class="botaoCad">Cadastrar</button>
+          <input type="submit" id="botao" class="botaoCad" value="Cadastrar"/>
         </div>
       </form>
     </div>

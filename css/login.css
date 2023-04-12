@@ -24,6 +24,15 @@
     flex-direction: column;
 }
 
+.validado{
+    margin-top: 80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 form{
     margin-top: 30px;
     display: flex;

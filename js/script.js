@@ -62,6 +62,124 @@ function calcularDV(cpfSemDV) {
 
 ////////////
 
+//mascara no CPF
+function formatCpf(cpf) {
+  cpf = cpf.replace(/\D/g, ""); // Remove tudo que não é número
+  if (cpf.length > 11) { // Verifica se o CPF tem mais de 11 dígitos
+    cpf = cpf.slice(0, 11); // Se tiver, remove os dígitos extras
+  }
+  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2"); // Insere ponto após os primeiros 3 números
+  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2"); // Insere outro ponto após os próximos 3 números
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Insere hífen e os últimos 2 números
+  
+  return cpf;
+}
+
+
+const cpfInputs = document.querySelectorAll(".inputCpf");
+
+cpfInputs.forEach(function(cpfInput) {
+  cpfInput.addEventListener("input", function(e) {
+    let cpf = e.target.value;
+    cpf = formatCpf(cpf);
+    e.target.value = cpf;
+  });
+});
+
+
+////////////
+
+//mascara cnpj
+function formatCnpj(cnpj) {
+  cnpj = cnpj.replace(/\D/g, ""); // Remove tudo que não é número
+  if (cnpj.length > 14) { // Verifica se o CNPJ tem mais de 14 dígitos
+    cnpj = cnpj.slice(0, 14); // Se tiver, remove os dígitos extras
+  }
+  cnpj = cnpj.replace(/(\d{2})(\d)/, "$1.$2"); // Insere ponto após os primeiros 2 números
+  cnpj = cnpj.replace(/(\d{3})(\d)/, "$1.$2"); // Insere outro ponto após os próximos 3 números
+  cnpj = cnpj.replace(/(\d{3})(\d)/, "$1/$2"); // Insere barra após os próximos 3 números
+  cnpj = cnpj.replace(/(\d{4})(\d{1,2})$/, "$1-$2"); // Insere hífen e os últimos 2 números
+  
+  return cnpj;
+}
+
+const cnpjInputs = document.querySelectorAll(".inputCnpj");
+
+cnpjInputs.forEach(function(cnpjInput) {
+  cnpjInput.addEventListener("input", function(e) {
+    let cnpj = e.target.value;
+    cnpj = formatCnpj(cnpj);
+    e.target.value = cnpj;
+  });
+});
+
+
+///////////
+
+//mascara para telefones
+function formatTelefone(telefone) {
+  telefone = telefone.replace(/\D/g, ""); // Remove tudo que não é número
+  if (telefone.length > 11) { 
+    telefone = telefone.slice(0, 11); 
+  }
+  telefone = telefone.replace(/^(\d{2})(\d)/g, "($1) $2"); // Insere parênteses após os primeiros 2 números
+  telefone = telefone.replace(/(\d)(\d{4})$/, "$1-$2"); // Insere hífen e os últimos 4 números
+  telefone = telefone.replace(/(\d)(\d{4})$/, "$1 $2"); // Insere espaço entre o 9º e o 10º dígito
+  return telefone;
+}
+
+const telefoneInputs = document.querySelectorAll(".inputTel");
+
+telefoneInputs.forEach(function(telefoneInput) {
+  telefoneInput.addEventListener("input", function(e) {
+    let telefone = e.target.value;
+    telefone = formatTelefone(telefone);
+    e.target.value = telefone;
+  });
+});
+
+
+///////////
+
+//mascara para preços
+formatPreco = (preco) => {
+  preco = preco.replace(/\D/g, ""); // Remove tudo que não é número
+  preco = preco.replace(/(\d{2})$/, ",$1"); // Adiciona a vírgula após os dois últimos dígitos
+  preco = preco.replace(/(\d+)(\d{3},\d{2})/, "$1.$2"); // Adiciona o ponto a cada grupo de 3 dígitos antes da vírgula
+  preco = "R$ " + preco; // Adiciona o símbolo de real
+  return preco;
+}
+
+const precoInputs = document.querySelectorAll(".inputPreco");
+
+precoInputs.forEach(function(precoInput) {
+  precoInput.addEventListener("input", function(e) {
+    let preco = e.target.value;
+    preco = formatPreco(preco);
+    e.target.value = preco;
+  });
+});
+
+///////////
+
+//mascara para insta
+formatInsta = (insta) => {
+  insta = insta.replace(/[^a-zA-Z0-9._]/g, "");
+  insta = "@" + insta;
+  return insta;
+}
+
+const instagram = document.querySelectorAll(".insta");
+
+instagram.forEach(function(instaInput) {
+  instaInput.addEventListener("input", function(e) {
+    let insta = e.target.value;
+    insta = formatInsta(insta);
+    e.target.value = insta;
+  });
+});
+
+//////////
 //Validação de emails
 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 validaEmail = (email) => {
@@ -78,15 +196,9 @@ validarFormulario1 = (event) => {
 
   event.preventDefault();
 
-  var nome = document.forms["meuForm1"]["nome"].value;
-  var sobrenome = document.forms["meuForm1"]["sobrenome"].value;
   var email = document.forms["meuForm1"]["email"].value;
-  var telefone = document.forms["meuForm1"]["telefone"].value;
   var senha = document.forms["meuForm1"]["senha"].value;
   var senha2 = document.forms["meuForm1"]["senha2"].value;
-  var endereco = document.forms["meuForm1"]["endereco"].value;
-  var dataNasc = document.forms["meuForm1"]["data"].value;
-  var sexo = document.forms["meuForm1"]["sexo"].value;
   var cpf = document.forms["meuForm1"]["cpf"].value;
 
   if (validaEmail(email) == false) {
@@ -121,18 +233,7 @@ validarFormulario2 = (event) => {
 
   event.preventDefault();
 
-  var nome = document.forms["meuForm3"]["nome"].value;
-  var codigo = document.forms["meuForm3"]["cod"].value;
-  var preco = document.forms["meuForm3"]["preco"].value;
-  var quantidade = document.forms["meuForm3"]["quant"].value;
-  var marca = document.forms["meuForm3"]["marca"].value;
-  var cat = document.forms["meuForm3"]["cat"].value;
-  var forn = document.forms["meuForm3"]["forn"].value;
-  var dataForn = document.forms["meuForm3"]["dataForn"].value;
-  var custo = document.forms["meuForm3"]["custo"].value;
-  var cor = document.forms["meuForm3"]["cor"].value;
-  var desc = document.forms["meuForm3"]["desc"].value;
-
+  validou();
   
 }
 
@@ -142,20 +243,31 @@ validarFormulario3 = (event) => {
 
   event.preventDefault();
 
-  var nome = document.forms["meuForm3"]["nome"].value;
-  var endereco = document.forms["meuForm3"]["end"].value;
   var email = document.forms["meuForm3"]["email"].value;
-  var telefone = document.forms["meuForm3"]["telefone"].value;
-  var cpf = document.forms["meuForm3"]["cpf"].value;
-  var rg = document.forms["meuForm3"]["rg"].value;
-  var data = document.forms["meuForm3"]["data"].value;
-  var data2 = document.forms["meuForm3"]["data2"].value;
-  var salario = document.forms["meuForm3"]["salario"].value;
-  var cargo = document.forms["meuForm3"]["cargo"].value;
-
-  
+  var cpf = document.forms["meuForm3"]["cpf"].value;  
 
   if (validaEmail(email) == false){
+    alert("Por favor, informe um email válido.");
+    return false;
+  }
+
+  else if (validarCPF(cpf) == false){
+    alert("CPF inválido!\nDigite um existente.")
+    return false;
+  }
+
+  else{
+    validou();
+  }
+}
+
+validarFormulario4 = (event) => {
+
+  event.preventDefault();
+
+  var email = document.forms["meuForm4"]["email"].value;
+
+  if (validaEmail(email) == false) {
     alert("Por favor, informe um email válido.");
     return false;
   }
@@ -163,4 +275,5 @@ validarFormulario3 = (event) => {
   else{
     validou();
   }
+
 }
