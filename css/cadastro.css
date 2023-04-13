@@ -6,7 +6,7 @@
 
 .telaCadastro{
   margin-top: 50px;
-  width: 100vw;
+  width: 100%;
   background-color: var(--branco-bg);
   display: flex;
   flex-direction: column;

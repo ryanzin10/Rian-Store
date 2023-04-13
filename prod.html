@@ -72,7 +72,7 @@
                       <label for="nome">Nome:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="nome" required>
+                      <input type="text" name="nome" placeholder="Ex.: Chuteira Nike Mercurial" required>
                     </div>
                   </div>
 
@@ -81,7 +81,7 @@
                         <label for="cod">Código:</label>
                       </div>
                       <div class="campo">
-                        <input type="number" name="cod" required>
+                        <input type="number" name="cod" placeholder="00000" required>
                       </div>
                   </div>
                 </div>
@@ -92,7 +92,7 @@
                       <label for="preco">Preço:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="preco" class="inputPreco" required>
+                      <input type="text" name="preco" class="inputPreco" placeholder="R$ 0,00" required>
                     </div>
                   </div>
 
@@ -101,7 +101,7 @@
                         <label for="quant">Quantidade:</label>
                       </div>
                       <div class="campo">
-                        <input type="number" name="quant" required>
+                        <input type="number" name="quant"  placeholder="Ex.: 300" required>
                       </div>
                   </div>
                 </div>
@@ -112,7 +112,7 @@
                       <label for="marca">Marca:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="marca" required>
+                      <input type="text" name="marca" placeholder="Ex.: Nike" required>
                     </div>
                   </div>
 
@@ -159,17 +159,27 @@
                       <label for="custo">Custo:</label>
                     </div>
                     <div class="campo">
-                      <input type="text" name="custo" class="inputPreco" required>
+                      <input type="text" name="custo" class="inputPreco" placeholder="R$ 0,00" required>
                     </div>
                   </div>
 
                   <div class="formRight">
-                      <div class="textoLabel">
-                        <label for="cor">Cor:</label>
-                      </div>
-                      <div class="campo">
-                        <input type="text" name="cor" required>
-                      </div>
+                    <div class="textoLabel">
+                      <label for="cor">Cor:</label>
+                    </div>
+                    <div class="campo">
+                      <select name="cor" id="">
+                        <option value="vermelho">Vermelho</option>
+                        <option value="laranja">Laranja</option>
+                        <option value="amarelo">Amarelo</option>
+                        <option value="verde">Verde</option>
+                        <option value="azul">Azul</option>
+                        <option value="roxo">Roxo</option>
+                        <option value="preto">Preto</option>
+                        <option value="branco">Branco</option>
+                        <option value="cinza">Cinza</option>
+                      </select>
+                    </div>
                     </div>
                 </div>
 
@@ -191,7 +201,7 @@
                       <label for="desc">Descrição (opcional):</label>
                     </div>
                     <div class="campo">
-                      <textarea name="desc" id="desc" cols="49" rows="5"></textarea>
+                      <textarea name="desc" id="desc" cols="49" rows="5" placeholder="Informações adicionais..."></textarea>
                     </div>
                   </div>
                 </div>

@@ -191,7 +191,26 @@ validaEmail = (email) => {
   }
 }
 ////////////
+validarFormulario = (event) => {
+  event.preventDefault();
 
+  var email = document.forms["meuForm1"]["email"].value;
+  var senha = document.forms["meuForm1"]["senha"].value;
+
+  if (validaEmail(email) == false) {
+    alert("Por favor, informe um email válido.");
+    return false;
+  }
+  else if (senha.length < 8) {
+    alert("A senha deve ter no mínimo 8 caracteres.");
+    return false;
+  }
+  else{
+    window.location.href = "index.html";
+  }
+}
+
+///////////
 validarFormulario1 = (event) => {
 
   event.preventDefault();

@@ -108,6 +108,11 @@
       justify-content: center;
     }
 
+    textarea{
+      width: 250px;
+      height: 100px;
+    }
+
     #cpf{
       margin: 0;
     }

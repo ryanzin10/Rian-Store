@@ -59,14 +59,14 @@
         <div class="login">
             <h3>Login</h3>
 
-            <form method="post">
+            <form method="post" name="meuForm1" onsubmit="validarFormulario(event)">
                 <label for="email">Email:</label>
-                <input type="email" name="email" placeholder="Digite seu email">
+                <input type="email" name="email" placeholder="Digite seu email" required>
 
                 <label for="name">Senha:</label>
-                <input type="password" name="password" placeholder="Digite sua senha">
+                <input type="password" name="senha" placeholder="Digite sua senha" required>
 
-                <button type="submit" id="botaoQuest" class="botaoLogin">Entrar</button>    
+                <input type="submit" id="botaoQuest" class="botaoLogin" value="Entrar">    
         </div>
         <div class="cadastro linha">
           <p>Não tem uma conta?</p>
