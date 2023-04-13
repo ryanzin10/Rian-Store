@@ -4,12 +4,17 @@
     background-image: url('/img/bg copy.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
+  }
+
+  .home h1{
+    font-size: 25px;
   }
 
   .topoDireita{
     display: none;
   }
+
 
   .lado{
     margin-left: 20px;
