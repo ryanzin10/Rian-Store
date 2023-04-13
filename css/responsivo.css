@@ -91,6 +91,14 @@
       width: 90vw;
     }
 
+    .login{
+      width: 300px;
+    }
+
+    .telaLogin .cadastro{
+      width: 300px;
+    }
+
     .login input{
       padding: 10px 20px;
     }
