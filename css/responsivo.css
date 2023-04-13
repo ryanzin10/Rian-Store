@@ -92,11 +92,12 @@
     }
 
     .login{
-      width: 300px;
+      padding-top: 20px;
+      width: 320px;
     }
 
     .telaLogin .cadastro{
-      width: 300px;
+      width: 320px;
     }
 
     .login input{
